@@ -17,7 +17,9 @@ $(document).ready(() => {
     var videoUrl = getVideoUrl();
     if(videoUrl !== null) {
       window.location = videoUrl;
-      window.close();
+      setTimeout(() => {
+          window.close();
+      }, 500);
     } else {
       alert("Failed to locate video :(");
     }
